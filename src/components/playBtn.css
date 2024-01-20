@@ -38,6 +38,7 @@
   font-size: 4rem;
   color: var(--primary);
   cursor: pointer;
+  margin-right: -10px;
 }
 .hero .playBtn::before {
   position: absolute;
