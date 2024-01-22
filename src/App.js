@@ -7,11 +7,13 @@ import "swiper/css";
 import "./App.css";
 import Header from "./pages/Header";
 import Hero from "./pages/Hero";
+import Main from "./pages/Main";
 const App = () => {
   return (
     <main>
       <Header />
       <Hero />
+      <Main />
     </main>
   );
 };

@@ -33,20 +33,21 @@ const Hero = () => {
   return (
     <div className="hero">
       {movies && movies.length > 0 && movies.map(movie => {
-        return (<div className="movie">
-          <img src={movie.bgImg} alt="bgimage" className={`bgImg ${movie.active ? "active" : undefined}`} />
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-lg-6 col-md-12">
-                <MovieContent movie={movie} />
-              </div>
-              <div className="col-lg-6 col-md-12">
-                <MovieDate movie={movie} />
-                <PlayBtn movie={movie} />
+        return (
+          <div className="movie">
+            <img src={movie.bgImg} alt="bgimage" className={`bgImg ${movie.active ? "active" : undefined}`} />
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-lg-6 col-md-12 ">
+                  <MovieContent movie={movie} />
+                </div>
+                <div className="col-lg-6 col-md-12 ">
+                  <MovieDate movie={movie} />
+                  <PlayBtn movie={movie} />
+                </div>
               </div>
             </div>
-          </div>
-        </div>)
+          </div>)
 
 
       })}

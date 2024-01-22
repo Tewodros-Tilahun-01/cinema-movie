@@ -1,9 +1,9 @@
 import React from 'react'
 import "./movieModal.css"
-function MovieModal({ movie, toggleModal, states }) {
+function MovieModal({ movie, toggleModal, sliderStates }) {
     return (
-        <div className={`movieModal ${states ? "active" : undefined}`}>
-            <a href="#" className="modalClose" onClick={toggleModal}>
+        <div className={`movieModal ${sliderStates ? "active" : undefined}`}>
+            <a href="#home" className="modalClose" onClick={toggleModal}>
                 <ion-icon name="close-outline"></ion-icon>
             </a>
             <iframe width={1280}
