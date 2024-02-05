@@ -22,4 +22,5 @@ export const Header = () => {
     </header>
   );
 };
+console.log(Header)
 export default Header;

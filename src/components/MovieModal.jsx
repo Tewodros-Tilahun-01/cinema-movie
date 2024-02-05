@@ -1,6 +1,7 @@
 import React from 'react'
 import "./movieModal.css"
 function MovieModal({ movie, toggleModal, sliderStates }) {
+
     return (
         <div className={`movieModal ${sliderStates ? "active" : undefined}`}>
             <a href="#home" className="modalClose" onClick={toggleModal}>

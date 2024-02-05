@@ -34,7 +34,7 @@ const Hero = () => {
     <div className="hero">
       {movies && movies.length > 0 && movies.map(movie => {
         return (
-          <div className="movie">
+          <div className="movie" key={movie._id}>
             <img src={movie.bgImg} alt="bgimage" className={`bgImg ${movie.active ? "active" : undefined}`} />
             <div className="container-fluid">
               <div className="row">
