@@ -4,7 +4,7 @@ import NavListItem from "../components/NavListItem";
 import "./header.css";
 import Search from "../components/Search";
 import Button from "../components/Button";
-export const Header = () => {
+export const Header = (props) => {
   return (
     <header>
       <a href="/" className="logo">
@@ -17,10 +17,10 @@ export const Header = () => {
           );
         })}
       </ul>
-      <Search />
+      <Search filter={props.filter} />
       <Button icon={<ion-icon name="log-in-outline"></ion-icon>} name="sign in" />
     </header>
   );
 };
-console.log(Header)
+
 export default Header;

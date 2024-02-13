@@ -5,15 +5,13 @@ import "bootstrap/dist/css/bootstrap.css";
 //import swiper styles
 import "swiper/css";
 import "./App.css";
-import Header from "./pages/Header";
-import Hero from "./pages/Hero";
-import Main from "./pages/Main";
+
+import SearchPage from "./pages/Searchpage";
+
 const App = () => {
   return (
     <main>
-      <Header />
-      <Hero />
-      <Main />
+      <SearchPage />
     </main>
   );
 };
