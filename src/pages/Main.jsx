@@ -3,6 +3,7 @@ import "./main.css"
 import Schedule from './Schedule'
 import Trend from './Trend'
 import Hero from "./Hero";
+import Blog from './Blog';
 
 function Main() {
     return (
@@ -10,6 +11,7 @@ function Main() {
             <Hero />
             <Schedule />
             <Trend />
+            <Blog />
         </main>
     )
 }

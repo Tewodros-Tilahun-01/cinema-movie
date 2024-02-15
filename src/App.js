@@ -6,12 +6,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import "swiper/css";
 import "./App.css";
 
-import SearchPage from "./pages/Searchpage";
+import MainPage from "./pages/MainPage";
 
 const App = () => {
   return (
     <main>
-      <SearchPage />
+      <MainPage />
     </main>
   );
 };

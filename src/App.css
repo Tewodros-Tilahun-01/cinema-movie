@@ -12,7 +12,8 @@
 }
 body {
   background: #000000;
-  font-family: "Roboto", san-serif;
+  font-family: "Roboto", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 body::-webkit-scrollbar {
   display: none;

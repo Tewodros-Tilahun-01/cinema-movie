@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 //import swiper styles
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { Autoplay } from "swiper/modules"
+import { Autoplay, EffectCoverflow } from "swiper/modules"
 
 import "./trend.css";
 import TrendCard from '../components/TrendCard';
@@ -31,6 +31,7 @@ function Trend() {
                 </div>
                 <div className='row'>
                     <Swiper
+                        slidesPerView={'auto'}
                         breakpoints={{
                             320: {
                                 slidesPerView: 1,
@@ -51,14 +52,14 @@ function Trend() {
                             },
 
                         }}
+
                         spaceBetween={30}
                         autoplay={{
-                            delay: 2000,
+                            delay: 2500,
                             disableOnInteraction: false,
-
                         }}
                         loop={true}
-                        modules={[Autoplay]}
+                        modules={[Autoplay, EffectCoverflow]}
                         className='trendSwiper'
                     >{slides && slides.length > 0 && slides.map(slide => {
                         return (
