@@ -27,7 +27,7 @@ function Blog() {
                 </div>
                 <div className="row mt-5">
                     {blogs.length > 0 && blogs.map((blog) => {
-                        return <BlogCard blog={blog} />
+                        return <BlogCard key={blog._id} blog={blog} />
                     })}
                 </div>
             </div>

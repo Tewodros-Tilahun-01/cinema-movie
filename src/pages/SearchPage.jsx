@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from '../components/Card';
 import NotFound from '../components/NotFound';
-function SearchResult(props) {
+function SearchPage(props) {
     const { movies } = props
 
     return (
@@ -21,4 +21,4 @@ function SearchResult(props) {
     )
 }
 
-export default SearchResult
+export default SearchPage

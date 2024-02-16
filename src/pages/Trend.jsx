@@ -55,7 +55,7 @@ function Trend() {
 
                         spaceBetween={30}
                         autoplay={{
-                            delay: 2500,
+                            delay: 2200,
                             disableOnInteraction: false,
                         }}
                         loop={true}

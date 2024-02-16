@@ -2,7 +2,7 @@ main {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 0 0 120px;
+  padding: 0 0;
   background: #000000;
 }
 main::before {

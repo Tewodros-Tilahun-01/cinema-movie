@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import Header from "./Header";
-import SearchResult from './SearchResult';
-import Main from './Main';
+import Schedule from './Schedule'
+import Trend from './Trend'
+import Hero from "./Hero";
+import Blog from './Blog';
+import Footer from './Footer';
+import SearchPage from './SearchPage';
 import BackButton from '../components/BackButton';
-function SearchPage() {
+import "./mainpage.css"
+import BackToTopBtn from '../components/BackToTopBtn';
+function MainPage() {
   const [movies, setMovies] = useState([]);
   const [data, setData] = useState([]);
   const [searchOn, setSearchOn] = useState(false)
+  const [scroll, setScroll] = useState(0)
   const fetchData = async () => {
     try {
       const res = await fetch("http://localhost:3000/data/movieData.json");
@@ -16,6 +23,7 @@ function SearchPage() {
       console.error("Error:", error);
     }
   };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -35,16 +43,35 @@ function SearchPage() {
     }
 
   }
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY);
+
+    });
+    return (
+      window.removeEventListener("scroll", () => {
+        setScroll(window.scrollY);
+      })
+    )
+  }, [scroll])
   return (
     <>
-      <Header filter={filter} />
+      <Header filter={filter} scroll={scroll} />
       {
         searchOn && <BackButton setSearchOn={setSearchOn} />
       }
-      {searchOn ? <SearchResult movies={movies} /> : <Main />}
+      {searchOn ? <SearchPage movies={movies} /> :
+        <main>
+          <Hero />
+          <Schedule />
+          <Trend />
+          <Blog />
+          <Footer />
+          <BackToTopBtn scroll={scroll} />
+        </main>}
     </>
 
   )
 }
 
-export default SearchPage
+export default MainPage
