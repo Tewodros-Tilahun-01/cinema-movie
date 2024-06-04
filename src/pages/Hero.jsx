@@ -37,7 +37,7 @@ const Hero = () => {
             {movies &&
                 movies.length > 0 &&
                 movies.map((movie) => {
-                    return (
+                    return movie.active ? (
                         <div className="movie" key={movie._id}>
                             <img
                                 src={movie.bgImg}
@@ -58,7 +58,7 @@ const Hero = () => {
                                 </div>
                             </div>
                         </div>
-                    );
+                    ) : null;
                 })}
 
             {movies.length > 0 && (

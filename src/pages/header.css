@@ -1,32 +1,37 @@
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 100px;
-  transition: 0.3s;
-  z-index: 100000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    transition: 0.3s;
+    z-index: 100000;
 }
 header.scrolled {
-  background: rgba(0, 0, 0, 0.6);
-  border-bottom: 2px solid var(--primary);
-  border-image: linear-gradient(90deg, transparent, var(--primary), transparent)
-    30;
-  backdrop-filter: blur(20px);
-  padding: 10px 100px;
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom: 2px solid var(--primary);
+    border-image: linear-gradient(
+            90deg,
+            transparent,
+            var(--primary),
+            transparent
+        )
+        30;
+    backdrop-filter: blur(20px);
+    padding: 10px 100px;
 }
 .logo {
-  font-family: "Racing Sans One", san-serif;
-  font-size: 35px;
-  letter-spacing: 2px;
-  font-weight: 800;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
+    font-family: "Racing Sans One", san-serif;
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 .nav {
-  display: flex;
+    display: flex;
 }

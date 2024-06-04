@@ -2,19 +2,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 :root {
-  --primary: #ff3700;
+    --primary: #ff3700;
 }
 body {
-  background: #000000;
-  font-family: "Roboto", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background: #000000;
+    font-family: "Roboto", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
+}
+@media (max-width: 470px) {
+    main header {
+        padding: 10px;
+    }
+
+    main .back-button {
+        top: 15px;
+    }
+    main .hero {
+        padding: 0 10px;
+    }
+    .movie img {
+        object-fit: cover;
+        object-position: center;
+    }
+    main .hero .movie {
+        padding: 0 10px;
+        align-items: flex-start;
+    }
+
+    .movie .container-fluid {
+        margin-top: 200px;
+    }
+
+    main .movieSwiper {
+        width: 70vw;
+    }
+    main section {
+        padding: 0 10px;
+    }
+    .schedule .row .filters {
+        margin-top: 20px;
+    }
+    .schedule .row .filters .filters {
+        padding-left: 5px;
+    }
+    .schedule .row .filters .filters li {
+        padding: 14px;
+    }
+}
+@media (max-width: 1000px) {
+    header .nav,
+    header .mainBtn {
+        display: none;
+    }
+    .flex-row .flex2 {
+        display: none;
+    }
 }
