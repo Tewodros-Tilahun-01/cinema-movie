@@ -1,25 +1,25 @@
 .hero .date {
-  position: relative;
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(0);
-  transition: 1s;
-  z-index: 1000;
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 1s;
+    z-index: 1000;
 }
 .hero .date.active {
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
 }
 .hero .date h2 {
-  font-family: "Racing sans one", cursive;
-  color: #ffffff;
-  font-size: 7rem;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-  -webkit-mask: linear-gradient(#000000 0 0), linear-gradient(#000000 0 0);
-  -webkit-mask-clip: text, padding-box;
-  -webkit-mask-composite: xor;
+    font-family: "Racing sans one", cursive;
+    color: #ffffff;
+    font-size: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    -webkit-mask: linear-gradient(#000000 0 0), linear-gradient(#000000 0 0);
+    -webkit-mask-clip: text, padding-box;
+    -webkit-mask-composite: xor;
 }
