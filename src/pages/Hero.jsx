@@ -10,7 +10,7 @@ const Hero = () => {
     const fetchData = async () => {
         try {
             const res = await fetch(
-                "http://localhost:3000/data/movieData.json"
+                "https://tadg7.github.io/cinima_api/data/movieData.json"
             );
             const data = await res.json();
             setMovies(data);

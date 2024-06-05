@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 // import swiper react componetnts
 import { Swiper, SwiperSlide } from "swiper/react";
 //import swiper styles
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { Autoplay, EffectCoverflow } from "swiper/modules"
+import { Autoplay, EffectCoverflow } from "swiper/modules";
 
 import "./trend.css";
-import TrendCard from '../components/TrendCard';
+import TrendCard from "../components/TrendCard";
 function Trend() {
-    const [slides, setSlides] = useState([])
+    const [slides, setSlides] = useState([]);
     const fetchData = async () => {
         try {
-            const res = await fetch("http://localhost:3000/data/movieData.json");
+            const res = await fetch(
+                "https://tadg7.github.io/cinima_api/data/movieData.json"
+            );
             const data = await res.json();
             setSlides(data);
         } catch (error) {
@@ -24,14 +26,14 @@ function Trend() {
         fetchData();
     }, []);
     return (
-        <section id="trend" className='trend'>
+        <section id="trend" className="trend">
             <div className="container-fluid">
                 <div className="row">
                     <h4 className="section-title">coming soon</h4>
                 </div>
-                <div className='row'>
+                <div className="row">
                     <Swiper
-                        slidesPerView={'auto'}
+                        slidesPerView={"auto"}
                         breakpoints={{
                             320: {
                                 slidesPerView: 1,
@@ -40,7 +42,6 @@ function Trend() {
                             480: {
                                 slidesPerView: 3,
                                 spaceBetween: 30,
-
                             },
                             640: {
                                 slidesPerView: 4,
@@ -50,9 +51,7 @@ function Trend() {
                                 slidesPerView: 6,
                                 spaceBetween: 30,
                             },
-
                         }}
-
                         spaceBetween={30}
                         autoplay={{
                             delay: 2200,
@@ -60,21 +59,22 @@ function Trend() {
                         }}
                         loop={true}
                         modules={[Autoplay, EffectCoverflow]}
-                        className='trendSwiper'
-                    >{slides && slides.length > 0 && slides.map(slide => {
-                        return (
-                            <SwiperSlide key={slide._id}>
-                                <TrendCard slide={slide} />
-                            </SwiperSlide>
-                        )
-                    })}
-
+                        className="trendSwiper"
+                    >
+                        {slides &&
+                            slides.length > 0 &&
+                            slides.map((slide) => {
+                                return (
+                                    <SwiperSlide key={slide._id}>
+                                        <TrendCard slide={slide} />
+                                    </SwiperSlide>
+                                );
+                            })}
                     </Swiper>
                 </div>
             </div>
-
         </section>
-    )
+    );
 }
 
-export default Trend
+export default Trend;
