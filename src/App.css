@@ -57,6 +57,9 @@ body::-webkit-scrollbar {
     .schedule .row .filters .filters li {
         padding: 14px;
     }
+    main header.scrolled {
+        padding: 10px;
+    }
 }
 @media (max-width: 1000px) {
     header .nav,
@@ -65,5 +68,11 @@ body::-webkit-scrollbar {
     }
     .flex-row .flex2 {
         display: none;
+    }
+}
+@media (max-width: 800px) {
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 33.33333333% !important;
     }
 }
