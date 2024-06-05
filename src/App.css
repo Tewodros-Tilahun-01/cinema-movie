@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
 
     main .back-button {
         top: 15px;
+        right: 8%;
     }
     main .hero {
         padding: 0 10px;
@@ -46,7 +47,7 @@ body::-webkit-scrollbar {
         width: 70vw;
     }
     main section {
-        padding: 0 10px;
+        padding: 20px 13px;
     }
     .schedule .row .filters {
         margin-top: 20px;
