@@ -36,11 +36,7 @@ body::-webkit-scrollbar {
     }
     main .hero .movie {
         padding: 0 10px;
-        align-items: flex-start;
-    }
-
-    .movie .container-fluid {
-        margin-top: 200px;
+        align-items: center;
     }
 
     main .movieSwiper {
