@@ -5,22 +5,15 @@ import MovieDate from "../components/MovieDate";
 import PlayBtn from "../components/PlayBtn";
 import MovieSwiper from "../components/MovieSwiper";
 
-const Hero = () => {
+const Hero = ({ data }) => {
     const [movies, setMovies] = useState([]);
-    const fetchData = async () => {
-        try {
-            const res = await fetch(
-                "https://tadg7.github.io/cinima_api/data/movieData.json"
-            );
-            const data = await res.json();
-            setMovies(data);
-        } catch (error) {
-            console.error("Error:", error);
-        }
+    const [sliderStates, setsliderStates] = useState(false);
+    const toggleModal = () => {
+        setsliderStates(!sliderStates);
     };
     useEffect(() => {
-        fetchData();
-    }, []);
+        setMovies(data);
+    }, [data]);
     const handlSlideChange = (id) => {
         const newMovie = movies.map((movie) => {
             movie.active = false;
@@ -53,7 +46,11 @@ const Hero = () => {
                                     </div>
                                     <div className="flex2">
                                         <MovieDate movie={movie} />
-                                        <PlayBtn movie={movie} />
+                                        <PlayBtn
+                                            movie={movie}
+                                            sliderStates={sliderStates}
+                                            toggleModal={toggleModal}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -61,9 +58,13 @@ const Hero = () => {
                     ) : null;
                 })}
 
-            {movies.length > 0 && (
-                <MovieSwiper slides={movies} slideChange={handlSlideChange} />
-            )}
+            {movies.length > 0 &&
+                (sliderStates ? null : (
+                    <MovieSwiper
+                        slides={movies}
+                        slideChange={handlSlideChange}
+                    />
+                ))}
         </div>
     );
 };

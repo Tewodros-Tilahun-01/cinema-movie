@@ -3,24 +3,9 @@ import "./schedule.css";
 import Card from "../components/Card";
 import filterList from "../data/filter";
 
-function Schedule() {
-    const [data, setData] = useState([]);
+function Schedule({ data }) {
     const [movies, setMovies] = useState([]);
     const [filters, setFilters] = useState(filterList);
-    const fetchData = async () => {
-        try {
-            const res = await fetch(
-                "https://tadg7.github.io/cinima_api/data/movieData.json"
-            );
-            const data = await res.json();
-            setData(data);
-        } catch (error) {
-            console.error("Error:", error);
-        }
-    };
-    useEffect(() => {
-        fetchData();
-    }, []);
     useEffect(() => {
         setMovies(data);
     }, [data]);

@@ -45,9 +45,7 @@ function MainPage() {
         }
     }
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            setScroll(window.scrollY);
-        });
+        window.addEventListener("scroll", () => setScroll(window.scrollY));
         return window.removeEventListener("scroll", () => {
             setScroll(window.scrollY);
         });
@@ -60,9 +58,9 @@ function MainPage() {
                 <SearchPage movies={movies} />
             ) : (
                 <main>
-                    <Hero />
-                    <Schedule />
-                    <Trend />
+                    <Hero data={data} />
+                    <Schedule data={data} />
+                    <Trend slides={data} />
                     <Blog />
                     <Footer />
                     <BackToTopBtn scroll={scroll} />

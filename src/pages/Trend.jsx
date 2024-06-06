@@ -9,22 +9,7 @@ import { Autoplay, EffectCoverflow } from "swiper/modules";
 
 import "./trend.css";
 import TrendCard from "../components/TrendCard";
-function Trend() {
-    const [slides, setSlides] = useState([]);
-    const fetchData = async () => {
-        try {
-            const res = await fetch(
-                "https://tadg7.github.io/cinima_api/data/movieData.json"
-            );
-            const data = await res.json();
-            setSlides(data);
-        } catch (error) {
-            console.error("Error:", error);
-        }
-    };
-    useEffect(() => {
-        fetchData();
-    }, []);
+function Trend({ slides }) {
     return (
         <section id="trend" className="trend">
             <div className="container-fluid">

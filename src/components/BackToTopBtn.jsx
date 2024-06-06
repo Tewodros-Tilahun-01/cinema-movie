@@ -1,16 +1,18 @@
-import React from 'react'
-import "./backToTopBtn.css"
+import React from "react";
+import "./backToTopBtn.css";
 function BackToTopBtn({ scroll }) {
     const backToTop = () => {
         window.scrollTo(0, 0);
-    }
+    };
     return (
-        <a href="/#" className={
-            `back-to-top ${scroll > 100 ? "active" : undefined}`
-        }
-            onClick={backToTop}>
+        <a
+            href="/#"
+            className={`back-to-top ${scroll > 100 ? "active" : undefined}`}
+            onClick={backToTop}
+        >
             <ion-icon name="arrow-up-outline"></ion-icon>
-        </a>)
+        </a>
+    );
 }
 
-export default BackToTopBtn
+export default BackToTopBtn;
