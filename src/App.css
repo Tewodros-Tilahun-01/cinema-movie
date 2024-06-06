@@ -61,14 +61,28 @@ body::-webkit-scrollbar {
     main header.scrolled {
         padding: 10px;
     }
+    .movieModal.active {
+        left: 5px;
+        right: 5px;
+        top: 25%;
+        bottom: 25%;
+    }
+    .movieModal.active iframe {
+        width: 530px;
+        height: 240px;
+        padding-left: 90px;
+    }
 }
 @media (max-width: 1000px) {
     header .nav,
     header .mainBtn {
         display: none;
     }
-    .flex-row .flex2 {
+    .flex-row .flex2 .date {
         display: none;
+    }
+    .container-fluid .flex-row {
+        flex-direction: column !important;
     }
 }
 @media (max-width: 800px) {
