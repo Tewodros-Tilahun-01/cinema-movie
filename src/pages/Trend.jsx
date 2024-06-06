@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-// import swiper react componetnts
 import { Swiper, SwiperSlide } from "swiper/react";
-//import swiper styles
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow } from "swiper/modules";

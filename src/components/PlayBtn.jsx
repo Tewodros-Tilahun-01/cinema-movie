@@ -1,5 +1,4 @@
 import React from "react";
-// import { useState } from "react";
 import "./playBtn.css";
 import MovieModal from "./MovieModal";
 function Button({ movie, toggleModal, sliderStates }) {

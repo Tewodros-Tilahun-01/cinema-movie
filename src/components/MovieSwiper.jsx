@@ -1,10 +1,8 @@
 import React from "react";
-//import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
-//import swiper styles
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-// import required modules
+
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import "./movieswiper.css";
 function MovieSwiper({ slides, slideChange }) {
