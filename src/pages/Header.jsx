@@ -6,7 +6,7 @@ import Search from "../components/Search";
 import Button from "../components/Button";
 export const Header = (props) => {
     return (
-        <header className={`${props.scroll > 60 ? "scrolled" : undefined}`}>
+        <header className={`${props.scroll > 40 ? "scrolled" : undefined}`}>
             <a href="/" className="logo">
                 cinima
             </a>

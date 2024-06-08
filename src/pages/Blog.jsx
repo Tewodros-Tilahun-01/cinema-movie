@@ -12,7 +12,7 @@ function Blog() {
             const data = await res.json();
             setBlogs(data);
         } catch {
-            console.err("Error", Error);
+            console.log("Error", Error);
         }
     };
     useEffect(() => {

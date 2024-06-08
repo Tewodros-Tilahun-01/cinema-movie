@@ -22,7 +22,7 @@ function MainPage() {
             const resData = await res.json();
             setData(resData);
         } catch (error) {
-            console.error("Error:", error);
+            console.log("Error:", error);
         }
     };
 
