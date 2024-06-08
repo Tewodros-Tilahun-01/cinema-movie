@@ -3,7 +3,7 @@ import "./search.css";
 function Search(props) {
   return (
     <div className="search">
-      <input type="text" placeholder="search" className="text" />
+      <input type="text" placeholder="search" className="text" onKeyDown={props.filter}/>
       <div onClick={props.filter}><ion-icon name="search-outline" ></ion-icon>
       </div>
     </div>

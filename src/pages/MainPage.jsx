@@ -32,8 +32,20 @@ function MainPage() {
     useEffect(() => {
         setMovies(data);
     }, [data]);
+    
     function filter(event) {
-        const searchword = event.target.parentNode.parentNode.firstChild.value;
+        let searchword ="";
+        if (event.keyCode === 13) {
+            searchword = event.target.value;
+            findMovie(searchword);
+        }
+        else if(event.target.name === "search-outline"){
+            searchword = event.target.parentNode.parentNode.firstChild.value;
+            findMovie(searchword);
+        }
+       
+    }
+    function findMovie(searchword){
         if (searchword === "") {
             setSearchOn(false);
         } else {
