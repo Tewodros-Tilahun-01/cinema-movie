@@ -14,7 +14,7 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     outline: none;
     border-radius: 4px;
-    padding: 0 60px 0 45px !important;
+    padding: 0 0 0 45px !important;
     backdrop-filter: blur(10px);
     font-size: 1.3rem;
 }
