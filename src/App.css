@@ -83,7 +83,10 @@ body::-webkit-scrollbar {
     }
     .container-fluid .flex-row {
         flex-direction: column !important;
-        margin-bottom:0px;
+        margin-bottom: 20px;
+    }
+    .hero .flex-row .trailer {
+        right: 25%;
     }
 }
 @media (max-width: 800px) {
