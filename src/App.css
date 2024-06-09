@@ -83,6 +83,7 @@ body::-webkit-scrollbar {
     }
     .container-fluid .flex-row {
         flex-direction: column !important;
+        margin-bottom:50px;
     }
 }
 @media (max-width: 800px) {
