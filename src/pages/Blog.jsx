@@ -7,7 +7,7 @@ function Blog() {
     const fetchData = async () => {
         try {
             const res = await fetch(
-                "https://tadg7.github.io/cinima_api/data/blogData.json"
+                "https://Tewodros-Tilahun-01.github.io/cinima_api/data/blogData.json"
             );
             const data = await res.json();
             setBlogs(data);

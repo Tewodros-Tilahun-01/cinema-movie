@@ -17,7 +17,7 @@ function MainPage() {
     const fetchData = async () => {
         try {
             const res = await fetch(
-                "https://tadg7.github.io/cinima_api/data/movieData.json"
+                "https://Tewodros-Tilahun-01.github.io/cinima_api/data/movieData.json"
             );
             const resData = await res.json();
             setData(resData);
@@ -32,20 +32,18 @@ function MainPage() {
     useEffect(() => {
         setMovies(data);
     }, [data]);
-    
+
     function filter(event) {
-        let searchword ="";
+        let searchword = "";
         if (event.keyCode === 13) {
             searchword = event.target.value;
             findMovie(searchword);
-        }
-        else if(event.target.name === "search-outline"){
+        } else if (event.target.name === "search-outline") {
             searchword = event.target.parentNode.parentNode.firstChild.value;
             findMovie(searchword);
         }
-       
     }
-    function findMovie(searchword){
+    function findMovie(searchword) {
         if (searchword === "") {
             setSearchOn(false);
         } else {
