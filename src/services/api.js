@@ -4,7 +4,7 @@ export const apiService = {
   // Get all movies
   getMovies: async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/movies`);
+      const response = await fetch(`${API_BASE_URL}/api/movies`);
       if (!response.ok) {
         throw new Error('Failed to fetch movies');
       }
@@ -18,7 +18,7 @@ export const apiService = {
   // Get movie by ID
   getMovieById: async (id) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/movies/${id}`);
+      const response = await fetch(`${API_BASE_URL}/api/movies/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch movie');
       }
@@ -32,7 +32,7 @@ export const apiService = {
   // Get all blogs
   getBlogs: async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/blogs`);
+      const response = await fetch(`${API_BASE_URL}/api/blogs`);
       if (!response.ok) {
         throw new Error('Failed to fetch blogs');
       }
@@ -46,7 +46,7 @@ export const apiService = {
   // Get blog by ID
   getBlogById: async (id) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/blogs/${id}`);
+      const response = await fetch(`${API_BASE_URL}/api/blogs/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch blog');
       }
@@ -60,7 +60,7 @@ export const apiService = {
   // Health check
   healthCheck: async () => {
     try {
-      const response = await fetch(`${API_BASE_URL}/health`);
+      const response = await fetch(`${API_BASE_URL}/api/health`);
       if (!response.ok) {
         throw new Error('Backend is not responding');
       }
