@@ -4,9 +4,9 @@ const API_CONFIG = {
   development: {
     baseURL: 'http://localhost:5000/api'
   },
-  // Production (deployed)
+  // Production (deployed) - from environment variable
   production: {
-    baseURL: 'https://cinema-backend-api.onrender.com/api' // This will be your Render URL
+    baseURL: process.env.REACT_APP_API_BASE_URL 
   }
 };
 
@@ -18,4 +18,3 @@ export const API_BASE_URL = isProduction
   ? API_CONFIG.production.baseURL 
   : API_CONFIG.development.baseURL;
 
-console.log('🌐 Using API URL:', API_BASE_URL); 
