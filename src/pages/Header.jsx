@@ -8,7 +8,7 @@ export const Header = (props) => {
     return (
         <header className={`${props.scroll > 40 ? "scrolled" : undefined}`}>
             <a href="/" className="logo">
-                cinima
+            cinema
             </a>
             <ul className="nav">
                 {navListData.map((item) => {

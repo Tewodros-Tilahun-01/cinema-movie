@@ -9,20 +9,27 @@ import SearchPage from "./SearchPage";
 import BackButton from "../components/BackButton";
 import "./mainpage.css";
 import BackToTopBtn from "../components/BackToTopBtn";
+import { apiService } from "../services/api";
+
 function MainPage() {
     const [movies, setMovies] = useState([]);
     const [data, setData] = useState([]);
     const [searchOn, setSearchOn] = useState(false);
     const [scroll, setScroll] = useState(0);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
     const fetchData = async () => {
         try {
-            const res = await fetch(
-                "https://Tewodros-Tilahun-01.github.io/cinima_api/data/movieData.json"
-            );
-            const resData = await res.json();
+            setLoading(true);
+            setError(null);
+            const resData = await apiService.getMovies();
             setData(resData);
         } catch (error) {
             console.log("Error:", error);
+            setError("Failed to load movies. Please try again later.");
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -68,12 +75,26 @@ function MainPage() {
                 <SearchPage movies={movies} />
             ) : (
                 <main>
-                    <Hero data={data} />
-                    <Schedule data={data} />
-                    <Trend slides={data} />
-                    <Blog />
-                    <Footer />
-                    <BackToTopBtn scroll={scroll} />
+                    {loading && (
+                        <div className="text-center" style={{ padding: '50px' }}>
+                            <p>Loading movies...</p>
+                        </div>
+                    )}
+                    {error && (
+                        <div className="text-center" style={{ padding: '50px' }}>
+                            <p style={{ color: 'red' }}>{error}</p>
+                        </div>
+                    )}
+                    {!loading && !error && (
+                        <>
+                            <Hero data={data} />
+                            <Schedule data={data} />
+                            <Trend slides={data} />
+                            <Blog />
+                            <Footer />
+                            <BackToTopBtn scroll={scroll} />
+                        </>
+                    )}
                 </main>
             )}
         </>
