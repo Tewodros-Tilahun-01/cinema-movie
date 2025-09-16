@@ -6,3 +6,4 @@ A modern web application built with React.js for browsing and exploring movies. 
 [Live Demo 👈](https://tcinema.netlify.app/)
 
 ![App preview](/public/assets/docs/preview.png)
+
